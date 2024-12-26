@@ -5,6 +5,14 @@ export type Subject = {
     marks: number[];
 }
 
+export type Mark = {
+    type: string;
+    affectsAverage: boolean;
+    date: string;
+    value: string;
+    note: string;
+}
+
 export type MarkData = { name: string; data: Subject[] }[];
 
 export type MarkResponse = {name: string, data: MarkData[]}[];

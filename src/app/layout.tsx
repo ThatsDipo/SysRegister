@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} max-w-xl overflow-x-hidden mx-auto px-4 dark min-h-svh antialiased`}
-      >
-        {children}
-        <Footer />
+      <body className={`${inter.className} dark`}>
+        <div className="max-w-xl overflow-x-hidden mx-auto px-4 min-h-svh antialiased">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

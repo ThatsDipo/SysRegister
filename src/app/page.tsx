@@ -4,13 +4,13 @@
 // TODO: Make this a server component if possible, needs to not save the token.
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Gauge from "@/components/custom/Gauge";
+import Gauge from "@/components/metrics/Gauge";
 import { LoaderCircle, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import calculateAverage from "@/utils/calculateAverage";
-import Subject from "@/components/custom/Subject";
 import { MarkData } from "@/types";
-import Line from "@/components/custom/Line";
+import Subject from "@/components/marksPage/Subject";
+import Line from "@/components/metrics/Line";
 
 export default function Home() {
   const router = useRouter();
@@ -54,6 +54,7 @@ export default function Home() {
   const logOut = () => {
     // Exact same logic as the offical website lol
     localStorage.removeItem("authToken");
+    localStorage.removeItem("authCredentials");
     router.push("/auth");
   };
 

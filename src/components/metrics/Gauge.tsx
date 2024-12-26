@@ -41,9 +41,11 @@ export default function Gauge({
             /10
           </span>
         </span>
-        <span style={{ fontSize: fontSize * 0.4 }} className="opacity-70">
-          {label}
-        </span>
+        {label && (
+          <span style={{ fontSize: fontSize * 0.4 }} className="opacity-70">
+            {label}
+          </span>
+        )}
       </div>
     </div>
   );
